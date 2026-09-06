@@ -20,4 +20,9 @@ This folder contains real evidence from the completed CI/CD deployment for this 
 5. `05-deployed-image-sha.png`
    - Shows the backend and frontend Kubernetes deployments using ECR images tagged with the Git commit SHA.
 
+6. `06-frontend-ci-build-tests.png`
+   - Shows the corrected Frontend Continuous Integration `build` job completing successfully.
+   - Proves that the build job runs `npm ci`, then `CI=true npm test`, and only then builds the Docker image.
+   - This specifically verifies that frontend tests run inside the build job before the Docker build.
+
 All screenshots were captured from the actual GitHub repository, AWS/EKS deployment, and running application for this project.
