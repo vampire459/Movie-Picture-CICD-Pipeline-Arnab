@@ -487,6 +487,7 @@ Add these under **Settings -> Secrets and variables -> Actions -> Secrets**:
 
 - `AWS_ACCESS_KEY_ID`
 - `AWS_SECRET_ACCESS_KEY`
+- `AWS_SESSION_TOKEN`
 
 These belong to the `github-action-user` IAM user created by Terraform (see below). No AWS credentials are ever hardcoded in any workflow file — they are only referenced via `${{ secrets.* }}`.
 
