@@ -71,6 +71,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Run tests before build
+        run: CI=true npm test
+
       - name: Build Docker image
         run: |
           docker build \
